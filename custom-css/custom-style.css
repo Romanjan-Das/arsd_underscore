@@ -1,5 +1,6 @@
 .site-title{
     margin-top: 0px;
+    margin-bottom: 1rem;
     padding-top: 1rem;
     font-size: 3rem;
     font-weight: bold;
@@ -7,8 +8,10 @@
 }
 .site-title>a{
     text-decoration: none;
+    color: black;
 }
 .site-description{
+    margin-top: 0px;
     text-align: center;
 }
 .nav-menu{
@@ -31,15 +34,51 @@
 #colophon{
     grid-area: foot;
 }
+#right_blank{
+    grid-area: rdiv;
+}
+#left-blank{
+    grid-area: ldiv;
+}
+#right_blank{
+    min-width: 10vw;
+}
+#left_blank{
+    min-width: 10vw;
+}
+@media only screen and (max-width: 1300px) {
+    #right_blank{
+        min-width: 5vw;
+    }
+    #left_blank{
+        min-width: 5vw;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #right_blank{
+        min-width: 1vw;
+    }
+    #left_blank{
+        min-width: 1vw;
+    }
+  }  
 #page{
     display: grid;
-    grid-template-areas: 'head head head head'
-                         'main main main side'
-                         'foot foot foot foot';
+    grid-template-areas: 'head head head head head head'
+                         'rdiv main main main side ldiv'
+                         'rdiv foot foot foot foot ldiv';
     grid-gap: 1rem;
 }
 @media (orientation:portrait){
+    #right_blank{
+        display: none;
+    }
+    #left_blank{
+        display: none;
+    }
     #page{
+        width: 100vw;
         display: grid;
         grid-template-areas: 'head'
                              'main'
@@ -64,9 +103,9 @@
 .search-submit{
     width: 28%;
 }
-#primary{
+#primary{/*
     min-width: 60vw;
-    max-width: 70vw;
+    max-width: 70vw;*/
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -107,4 +146,22 @@ h2.widget-title{
     #commentform{
         width: 100%;
     }
+}
+.excerpt-title{
+    font-size: 2rem;
+    font-weight: bold;
+    grid-area: xtitle;
+}
+.excerpt-thumb{
+    grid-area: ximg;
+}
+.excerpt-excerpt{
+    grid-area: xexcerpt;
+}
+.excerpt{
+    display: grid;
+    grid-template-areas: 'xtitle xtitle xtitle'
+                         'ximg xexcerpt xexcerpt'
+                         'ximg xexcerpt xexcerpt';
+    grid-gap: 1rem;
 }
