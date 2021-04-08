@@ -137,6 +137,7 @@
 }
 h2.widget-title{
     font-size: 1rem;
+    margin-bottom: 0.1rem;
 }
 .widget>ul{
     padding-left: 2rem;
@@ -205,4 +206,44 @@ h2.widget-title{
 }
 #primary-menu>ul>li>a{
     color: white;
+}
+.widget>h2{
+    font-size: 1rem;
+    color: rgb(0, 81, 255);
+    font-weight: normal;
+}
+.widget a{
+    font-size: 1rem;
+    font-weight: normal;
+    color: #404040;
+    text-decoration:none;
+}
+.widget a:hover{
+    color: blue;
+}
+.widget a:visited{
+    font-size: 1rem;
+    font-weight: normal;
+    color: #404040;
+    text-decoration:none;
+}
+.widget a:visited:hover{
+    color: rgb(0, 81, 255);
+}
+.widget ul{
+    padding-left: 0px;
+}
+li::marker{
+    color: white;
+}
+.widget{
+    margin-bottom: 2rem;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    
+    background:rgb(0, 81, 255);
+    color: white;
+    line-height: 1;
+    padding: 0.45em 0.1em 0.45em 0.1em;
 }
