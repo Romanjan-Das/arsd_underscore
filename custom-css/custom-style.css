@@ -97,7 +97,7 @@
     box-sizing: border-box;
     border: 0.1rem solid gainsboro;
 }
-#secondary:hover{
+#secondary{
     box-shadow: 0px 0px 1rem gainsboro;
 }
 #secondary .widget>ul{
@@ -127,13 +127,13 @@
     }
 }
 #colophon{
-    background-color: slategrey;
     padding: 1rem;
-    color: white;
     box-sizing: border-box;
+    border: 0.1rem solid gainsboro;
+    box-shadow: 0px 0px 1rem gainsboro;
 }
-.site-info>a{
-    color: white;
+#colophon a{
+    color: #404040;
 }
 h2.widget-title{
     font-size: 1rem;
@@ -163,14 +163,20 @@ h2.widget-title{
     }
 }
 .excerpt-title{
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: normal;
     grid-area: xtitle;
 }
 .excerpt-thumb{
     min-width: 8rem;
+    max-width: 12rem;
     min-height: 8rem;
     grid-area: ximg;
+}
+@media (orientation: portrait){
+    .excerpt-thumb{
+        max-width: 100%;
+    }
 }
 .excerpt-excerpt{
     grid-area: xexcerpt;
@@ -198,7 +204,7 @@ h2.widget-title{
                              'xexcerpt';
     }
 }
-.excerpt:hover{
+.excerpt{
     box-shadow: 0px 0px 1rem gainsboro;
 }
 #primary-menu{
@@ -219,7 +225,9 @@ h2.widget-title{
     text-decoration:none;
 }
 .widget a:hover{
-    color: blue;
+    color: green;
+    text-decoration: underline;
+    text-decoration-color: green;
 }
 .widget a:visited{
     font-size: 1rem;
@@ -228,7 +236,9 @@ h2.widget-title{
     text-decoration:none;
 }
 .widget a:visited:hover{
-    color: rgb(0, 81, 255);
+    color: green;
+    text-decoration: underline;
+    text-decoration-color: green;
 }
 .widget ul{
     padding-left: 0px;
