@@ -1,3 +1,10 @@
+:root{
+    --default_text_color: #404040;
+    --green_hover_color: green;
+    --nav_menu_background_color: rgb(0, 81, 255);
+    --text_decoration_for_links: none;
+}
+
 .site-title{
     margin-top: 0px;
     margin-bottom: 1rem;
@@ -8,7 +15,7 @@
 }
 .site-title>a{
     text-decoration: none;
-    color: black;
+    color: var(--default_text_color);
 }
 .site-description{
     margin-top: 0px;
@@ -133,7 +140,7 @@
     box-shadow: 0px 0px 1rem gainsboro;
 }
 #colophon a{
-    color: #404040;
+    color: var(--default_text_color);
 }
 h2.widget-title{
     font-size: 1rem;
@@ -208,43 +215,41 @@ h2.widget-title{
     box-shadow: 0px 0px 1rem gainsboro;
 }
 #primary-menu{
-    background-color: rgb(0, 81, 255);
+    background-color: var(--nav_menu_background_color);
 }
 #primary-menu>ul>li>a{
     color: white;
 }
 .widget>h2{
     font-size: 1rem;
-    color: rgb(0, 81, 255);
+    color: var(--nav_menu_background_color);
     font-weight: normal;
 }
 .widget a{
     font-size: 1rem;
     font-weight: normal;
-    color: #404040;
+    color: var(--default_text_color);
     text-decoration:none;
 }
 .widget a:hover{
-    color: green;
-    text-decoration: underline;
-    text-decoration-color: green;
+    color: var(--green_hover_color);
+    text-decoration: var(--text_decoration_for_links);
 }
 .widget a:visited{
     font-size: 1rem;
     font-weight: normal;
-    color: #404040;
+    color: var(--default_text_color);
     text-decoration:none;
 }
 .widget a:visited:hover{
-    color: green;
-    text-decoration: underline;
-    text-decoration-color: green;
+    color: var(--green_hover_color);
+    text-decoration: var(--text_decoration_for_links);
 }
 .widget ul{
     padding-left: 0px;
 }
 li::marker{
-    color: white;
+    color: rgba(255, 255, 255, 0);
 }
 .widget{
     margin-bottom: 2rem;
@@ -252,8 +257,14 @@ li::marker{
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
     
-    background:rgb(0, 81, 255);
+    background:var(--nav_menu_background_color);
     color: white;
     line-height: 1;
     padding: 0.45em 0.1em 0.45em 0.1em;
+}
+.excerpt-link{
+    text-decoration:none;
+}
+.excerpt-link:visited{
+    color:var(--default_text_color);
 }

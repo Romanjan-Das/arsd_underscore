@@ -30,12 +30,14 @@ get_header();
 
 			/* Start the Loop */
 			while ( have_posts() ) :
-				?><div class="excerpt"><?php the_post();?>
+				?>
+				<a class="excerpt-link" href="<?php the_permalink();?>">
+				<div class="excerpt"><?php the_post();?>
                 <div class="excerpt-title"><?php the_title();?></div>
-                <div class="excerpt-thumb"><?php ?></div>
+                <div class="excerpt-thumb"><?php if(has_post_thumbnail()):?><img src="<?php the_post_thumbnail_url();?>"><?php endif;?></div>
                 <div class="excerpt-date"><?php the_date();?></div>
                 <div class="excerpt-excerpt"><?php the_excerpt();?></div>
-                </div><?php 
+                </div></a><?php 
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
