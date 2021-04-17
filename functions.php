@@ -184,3 +184,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/************************************added by romanjan das****************************************/
+function custom_excerpt_length($length){
+	return 43;
+}
+add_filter('excerpt_length','custom_excerpt_length');
+
+function custom_excerpt_more($more){
+	return "<span class=\"excerpt_read_more\"> ... read more</span>";
+}
+add_filter('excerpt_more','custom_excerpt_more');
