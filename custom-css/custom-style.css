@@ -31,10 +31,10 @@ body{
     justify-content: center;
     /*padding: 0.2rem 0px 0.2rem 0px;*/
 }
-.nav-menu>li:hover{
+.nav-menu li:hover{
     background-color:rgb(0, 27, 102);
 }
-.nav-menu>li>a{
+.nav-menu a{
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -431,4 +431,34 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .comments-title{
     font-weight: 500;
+}
+.nav-menu a{
+    color:white;
+}
+.nav-menu .sub-menu{
+    background-color:var(--nav_menu_background_color);
+}
+.nav-menu .sub-menu a{
+    width:auto;
+    min-height:2rem;
+}
+.nav-menu .sub-menu{
+    display: inline;
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.sub-menu .menu-item{
+    background-color: rgb(0, 27, 102);
+}
+.sub-menu .menu-item:hover{
+    background-color: var(--nav_menu_background_color);
+}
+@media(orientation:portrait){
+    .sub-menu .menu-item{
+        width:100vw;
+    }
 }
