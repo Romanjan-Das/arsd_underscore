@@ -6,4 +6,5 @@ window.onload=function(){
     var page = document.getElementById("page");
     page.appendChild(blank_div_1);
     page.appendChild(blank_div_2);
+    document.getElementsByTagName("body")[0].style.display="block";
 }
