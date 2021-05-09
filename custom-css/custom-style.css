@@ -21,6 +21,9 @@ a:visited{
 a:hover{
     color:var(--link_color_hover);
 }
+.excerpt-link:hover{
+    color:var(--default_text_color);
+}
 .excerpt-link,.excerpt-link:visited,.site-title a{
     color:var(--default_text_color);
 }
